@@ -165,6 +165,7 @@ typedef struct {
 } ZenityFormsValue;
 
 typedef struct {
+	char *dialog_text;
 	gboolean username;
 	char *password;
 	GtkWidget *entry_username;

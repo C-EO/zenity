@@ -75,15 +75,20 @@ zenity_password_dialog (ZenityData *data, ZenityPasswordData *password_data)
 	grid = GTK_WIDGET(gtk_builder_get_object (builder,
 				"zenity_password_grid"));
 
+	/* Set the dialog text if provided, otherwise use default */
+	label = GTK_WIDGET(gtk_builder_get_object (builder,
+				"zenity_password_title"));
+	if (password_data->dialog_text) {
+		gtk_label_set_text (GTK_LABEL(label), password_data->dialog_text);
+	} else if (password_data->username) {
+		gtk_label_set_text (GTK_LABEL(label),
+				_("Type your username and password"));
+	}
+	/* else keep default "Type your password" from UI file */
+
 	/* Checks if username has been passed as a parameter */
 	if (password_data->username)
 	{
-		/* Change the password label to ask for both username and password */
-		label = GTK_WIDGET(gtk_builder_get_object (builder,
-					"zenity_password_title"));
-		gtk_label_set_text (GTK_LABEL(label),
-				_("Type your username and password"));
-
 		/* Add the username label and entry and increment the row for the
 		 * password entry so it will be added below the username.
 		 */
