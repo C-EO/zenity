@@ -628,12 +628,12 @@ create_test ("file_selection",
 		unlink $tmpfile;
 		unlink $tmpfile2;
 
-		chomp($tmpfile = `mktemp /tmp/zenity_test.XXXXXXXXXX`);
-		chomp($tmpfile2 = `mktemp /tmp/zenity_test.XXXXXXXXXX`);
-		say "\nSelect BOTH temporary files (one has been pre-selected) and click OK.";
-		test_cmd_for_stdout (qq[$base_cmd --multiple --file-filter="zenity_test.*" --separator="~" --filename="$tmpfile"], "${tmpfile}~${tmpfile2}", '~');
-		unlink $tmpfile;
-		unlink $tmpfile2;
+		chomp($tmpfile = `mktemp -d /tmp/zenity_test.XXXXXXXXXX`);
+		chomp($tmpfile2 = `mktemp -d /tmp/zenity_test.XXXXXXXXXX`);
+		say "\nSelect BOTH temporary directories (one has been pre-selected) and click OK.";
+		test_cmd_for_stdout (qq[$base_cmd --multiple --directory --file-filter="zenity_test.*" --separator="~" --filename="$tmpfile"], "${tmpfile}~${tmpfile2}", '~');
+		rmdir $tmpfile;
+		rmdir $tmpfile2;
 	}
 );
 

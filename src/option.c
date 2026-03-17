@@ -2349,12 +2349,6 @@ zenity_option_parse (int argc, char **argv)
 				zenity_option_get_name (text_options, &zenity_general_uri),
 				ERROR_SUPPORT);
 
-	if (zenity_general_ok_button)
-		if (results->mode == MODE_FILE)
-			zenity_option_error (zenity_option_get_name (general_options,
-									 &zenity_general_ok_button),
-				ERROR_SUPPORT);
-
 	if (zenity_general_cancel_button)
 		if (results->mode == MODE_FILE || results->mode == MODE_ERROR ||
 			results->mode == MODE_WARNING || results->mode == MODE_INFO)

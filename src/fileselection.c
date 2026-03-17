@@ -31,13 +31,9 @@
 
 #include <config.h>
 
-/* TODO: port to GtkFileDialog.
- */
-G_GNUC_BEGIN_IGNORE_DEPRECATIONS
-
 static ZenityData *zen_data;
 
-static void zenity_fileselection_dialog_response (GtkWidget *widget, int response, gpointer data);
+static void zenity_fileselection_dialog_response (GObject *widget, GAsyncResult *response, gpointer data);
 
 static void
 show_extra_button_deprecation_warning (void)
@@ -50,31 +46,21 @@ show_extra_button_deprecation_warning (void)
 void
 zenity_fileselection (ZenityData *data, ZenityFileData *file_data)
 {
-	GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_OPEN;
-	GtkFileChooserNative *dialog;
+	GtkFileDialog *dialog = gtk_file_dialog_new ();
 
 	zen_data = data;
 
-	if (file_data->directory) {
-		action = GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER;
-	}
-	else if (file_data->save) {
-		action = GTK_FILE_CHOOSER_ACTION_SAVE;
-	}
-
-	dialog = gtk_file_chooser_native_new (data->dialog_title,
-		NULL,	/* parent */
-		action,
-		_("_OK"),
-		_("_Cancel"));
+	if (data->dialog_title)
+		gtk_file_dialog_set_title (GTK_FILE_DIALOG(dialog), data->dialog_title);
 
 	if (data->modal)
-		gtk_native_dialog_set_modal (GTK_NATIVE_DIALOG(dialog), TRUE);
+		gtk_file_dialog_set_modal (GTK_FILE_DIALOG(dialog), TRUE);
+
+	if (data->ok_label)
+		gtk_file_dialog_set_accept_label (GTK_FILE_DIALOG(dialog), data->ok_label);
 
 	if (data->extra_label)
 		show_extra_button_deprecation_warning ();
-
-	g_signal_connect (dialog, "response", G_CALLBACK(zenity_fileselection_dialog_response), file_data);
 
 	if (file_data->uri)
 	{
@@ -90,25 +76,17 @@ zenity_fileselection (ZenityData *data, ZenityFileData *file_data)
 				? g_object_ref (file)
 				: g_file_get_parent (file);
 
-			gtk_file_chooser_set_current_folder (GTK_FILE_CHOOSER(dialog), dir_gfile, &local_error);
-
-			if (local_error)
-				g_warning ("%s", local_error->message);
+			gtk_file_dialog_set_initial_folder (GTK_FILE_DIALOG(dialog), dir_gfile);
 		}
 
-		/* In 'save' mode, a user providing a filename typically means they want
-		 * that filename to be the suggested 'save-as' filename.
-		 */
-		if (file_data->save && file_data->uri[strlen (file_data->uri) - 1] != G_DIR_SEPARATOR)
-			gtk_file_chooser_set_current_name (GTK_FILE_CHOOSER(dialog), basename);
-
+		if (file_data->uri[strlen (file_data->uri) - 1] != G_DIR_SEPARATOR)
+			gtk_file_dialog_set_initial_name (GTK_FILE_DIALOG(dialog), basename);
 	}
-
-	if (file_data->multi)
-		gtk_file_chooser_set_select_multiple (GTK_FILE_CHOOSER(dialog), TRUE);
 
 	if (file_data->filter)
 	{
+		GListStore *filters = g_list_store_new(GTK_TYPE_FILE_FILTER);
+
 		/* Filter format: Executables | *.exe *.bat *.com */
 		for (int filter_i = 0; file_data->filter[filter_i]; filter_i++)
 		{
@@ -146,8 +124,10 @@ zenity_fileselection (ZenityData *data, ZenityFileData *file_data)
 			for (pattern = patterns; *pattern; pattern++)
 				gtk_file_filter_add_pattern (filter, *pattern);
 
-			gtk_file_chooser_add_filter (GTK_FILE_CHOOSER(dialog), filter);
+			g_list_store_append (filters, filter);
 		}
+
+		gtk_file_dialog_set_filters (GTK_FILE_DIALOG(dialog), G_LIST_MODEL(filters));
 	}
 
 	if (data->timeout_delay > 0)
@@ -155,19 +135,30 @@ zenity_fileselection (ZenityData *data, ZenityFileData *file_data)
 		ZENITY_UTIL_SETUP_TIMEOUT (dialog)
 	}
 
-	/* Since a native dialog is not a GtkWindow, we can't use our handy
-	 * util function.
-	 */
-	gtk_native_dialog_show (GTK_NATIVE_DIALOG(dialog));
+	if (file_data->multi)
+	{
+		if (file_data->directory)
+			gtk_file_dialog_select_multiple_folders (dialog, NULL, NULL, zenity_fileselection_dialog_response, file_data);
+		else
+			gtk_file_dialog_open_multiple (dialog, NULL, NULL, zenity_fileselection_dialog_response, file_data);
+	}
+	else
+	{
+		if (file_data->save)
+			gtk_file_dialog_save (dialog, NULL, NULL, zenity_fileselection_dialog_response, file_data);
+		else if (file_data->directory)
+			gtk_file_dialog_select_folder (dialog, NULL, NULL, zenity_fileselection_dialog_response, file_data);
+		else
+			gtk_file_dialog_open (dialog, NULL, NULL, zenity_fileselection_dialog_response, file_data);
+	}
 
 	zenity_util_gapp_main (NULL);
 }
 
 static void
-zenity_fileselection_dialog_output (GtkFileChooser *chooser,
+zenity_fileselection_dialog_output (GListModel *model,
 		ZenityFileData *file_data)
 {
-	g_autoptr(GListModel) model = gtk_file_chooser_get_files (chooser);
 	guint items = g_list_model_get_n_items (model);
 
 	for (guint i = 0; i < items; ++i)
@@ -183,27 +174,66 @@ zenity_fileselection_dialog_output (GtkFileChooser *chooser,
 }
 
 static void
-zenity_fileselection_dialog_response (GtkWidget *widget, int response, gpointer data)
+zenity_fileselection_dialog_response (GObject *widget, GAsyncResult *response, gpointer data)
 {
 	ZenityFileData *file_data = data;
-	GtkFileChooser *chooser = GTK_FILE_CHOOSER (widget);
+	GtkFileDialog *dialog = GTK_FILE_DIALOG (widget);
+	g_autoptr(GError) local_error = NULL;
 
-	switch (response)
+	if (file_data->multi)
 	{
-		case GTK_RESPONSE_ACCEPT:
-			zenity_fileselection_dialog_output (chooser, file_data);
-			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_OK);
-			break;
+		g_autoptr(GListModel) model = NULL;
 
-		case GTK_RESPONSE_CANCEL:
+		if (file_data->directory)
+			model = gtk_file_dialog_select_multiple_folders_finish (dialog, response, &local_error);
+		else
+			model = gtk_file_dialog_open_multiple_finish (dialog, response, &local_error);
+		
+		if (local_error && local_error->code != GTK_DIALOG_ERROR_DISMISSED)
+			g_warning ("%s", local_error->message);
+
+		if (local_error && local_error->code == GTK_DIALOG_ERROR_DISMISSED)
+		{
 			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_CANCEL);
-			break;
-
-		default:
+		}
+		else if (model == NULL)
+		{
 			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_ESC);
-			break;
+		}
+		else
+		{
+			zenity_fileselection_dialog_output (model, file_data);
+			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_OK);
+		}
 	}
+	else
+	{
+		g_autoptr(GFile) file = NULL;
+
+		if (file_data->save)
+			file = gtk_file_dialog_save_finish (dialog, response, &local_error);
+		else if (file_data->directory)
+			file = gtk_file_dialog_select_folder_finish (dialog, response, &local_error);
+		else
+			file = gtk_file_dialog_open_finish (dialog, response, &local_error);
+
+		if (local_error && local_error->code != GTK_DIALOG_ERROR_DISMISSED)
+			g_warning ("%s", local_error->message);
+
+		if (local_error && local_error->code == GTK_DIALOG_ERROR_DISMISSED)
+		{
+			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_CANCEL);
+		}
+		else if (file == NULL)
+		{
+			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_ESC);
+		}
+		else
+		{
+			g_print ("%s\n", g_file_get_path (file));
+			zen_data->exit_code = zenity_util_return_exit_code (ZENITY_OK);
+		}
+	}
+
 	zenity_util_gapp_quit (NULL, zen_data);
 }
-
-G_GNUC_END_IGNORE_DEPRECATIONS
