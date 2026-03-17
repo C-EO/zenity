@@ -7,11 +7,6 @@ project('zenity', 'c',
 app_id = 'org.gnome.Zenity'
 resource_base_path = '/org/gnome/Zenity'
 
-version_arr = meson.project_version().split('.')
-zenity_version_major = version_arr[0].to_int()
-zenity_version_minor = version_arr[1].to_int()
-zenity_version_micro = version_arr[2].to_int()
-
 zenity_prefix = get_option('prefix')
 zenity_bindir = join_paths(zenity_prefix, get_option('bindir'))
 zenity_libdir = join_paths(zenity_prefix, get_option('libdir'))
