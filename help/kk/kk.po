@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: zenity zenity-4-0\n"
-"POT-Creation-Date: 2026-03-14 18:19+0000\n"
-"PO-Revision-Date: 2026-03-17 22:45+0500\n"
+"POT-Creation-Date: 2026-03-17 17:49+0000\n"
+"PO-Revision-Date: 2026-03-17 22:56+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <Kazakh>\n"
 "Language: kk\n"
@@ -291,10 +291,10 @@ msgstr "Zenity күнтізбе сұхбат терезесінің мысалы
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-calendar-screenshot.png' "
-"md5='5179d22e4b3bd9b106792ea5f3b037ca'"
+"md5='6cea267756c112be1d42c05162ad98ca'"
 msgstr ""
 "external ref='figures/zenity-calendar-screenshot.png' "
-"md5='5179d22e4b3bd9b106792ea5f3b037ca'"
+"md5='6cea267756c112be1d42c05162ad98ca'"
 
 #. (itstool) path: info/desc
 #: C/color-selection.page:6
@@ -398,10 +398,10 @@ msgstr "<app>Zenity</app> түсті таңдау сұхбат терезесі�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-colorselection-screenshot.png' "
-"md5='9256ba82db5dd61942cddb2e9b801ce4'"
+"md5='44eacf35e65ea7e361d2861d577abc2d'"
 msgstr ""
 "external ref='figures/zenity-colorselection-screenshot.png' "
-"md5='9256ba82db5dd61942cddb2e9b801ce4'"
+"md5='44eacf35e65ea7e361d2861d577abc2d'"
 
 #. (itstool) path: info/desc
 #: C/entry.page:6
@@ -509,10 +509,10 @@ msgstr "<app>Zenity</app> мәтінді енгізу сұхбат терезе�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-entry-screenshot.png' "
-"md5='d7698dcc8b153c1be72fe8324b79d0f4'"
+"md5='472aa0168ddf4f35e6d7a5858d56521f'"
 msgstr ""
 "external ref='figures/zenity-entry-screenshot.png' "
-"md5='d7698dcc8b153c1be72fe8324b79d0f4'"
+"md5='472aa0168ddf4f35e6d7a5858d56521f'"
 
 #. (itstool) path: info/desc
 #: C/error.page:6
@@ -570,10 +570,10 @@ msgstr "<app>Zenity</app> қате сұхбат терезесінің мыса�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-error-screenshot.png' "
-"md5='4b461076520bc0ad570367af8279ef83'"
+"md5='9787520ed1845e6435798f01aede3137'"
 msgstr ""
 "external ref='figures/zenity-error-screenshot.png' "
-"md5='4b461076520bc0ad570367af8279ef83'"
+"md5='9787520ed1845e6435798f01aede3137'"
 
 #. (itstool) path: info/desc
 #: C/file-selection.page:6
@@ -720,10 +720,10 @@ msgstr "<app>Zenity</app> файлды таңдау сұхбат терезес�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-fileselection-screenshot.png' "
-"md5='3b722199d9524d2a1928895df5441e81'"
+"md5='56bb72a795d776931c5ce9ba05d98bbe'"
 msgstr ""
 "external ref='figures/zenity-fileselection-screenshot.png' "
-"md5='3b722199d9524d2a1928895df5441e81'"
+"md5='56bb72a795d776931c5ce9ba05d98bbe'"
 
 #. (itstool) path: info/desc
 #: C/forms.page:6
@@ -888,10 +888,10 @@ msgstr "<app>Zenity</app> формалар сұхбат терезесінің �
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-forms-screenshot.png' "
-"md5='4582609dd023b5b963192e6950578d79'"
+"md5='3d38ba633dc03d992658ca75e8fd742b'"
 msgstr ""
 "external ref='figures/zenity-forms-screenshot.png' "
-"md5='4582609dd023b5b963192e6950578d79'"
+"md5='3d38ba633dc03d992658ca75e8fd742b'"
 
 #. (itstool) path: credit/name
 #: C/index.page:6
@@ -982,10 +982,10 @@ msgstr "<app>Zenity</app> ақпараттық сұхбат терезесіні
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-information-screenshot.png' "
-"md5='d5ac93589e2fb31c085a06b0d91f3206'"
+"md5='bda77163239323c8115609d7de8f9590'"
 msgstr ""
 "external ref='figures/zenity-information-screenshot.png' "
-"md5='d5ac93589e2fb31c085a06b0d91f3206'"
+"md5='bda77163239323c8115609d7de8f9590'"
 
 #. (itstool) path: info/desc
 #: C/intro.page:6
@@ -1257,10 +1257,10 @@ msgstr "<app>Zenity</app> тізім сұхбат терезесінің мыс�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-list-screenshot.png' "
-"md5='a538e91abd09009fa36ad3f8f575a2ca'"
+"md5='a5f4881e5e772b157b13616bcfe2fae5'"
 msgstr ""
 "external ref='figures/zenity-list-screenshot.png' "
-"md5='a538e91abd09009fa36ad3f8f575a2ca'"
+"md5='a5f4881e5e772b157b13616bcfe2fae5'"
 
 #. (itstool) path: info/desc
 #: C/message.page:6
@@ -1415,10 +1415,10 @@ msgstr "<app>Zenity</app> хабарландыру таңбашасының мы
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-notification-screenshot.png' "
-"md5='723bd2d1283f5a888967815991cbe858'"
+"md5='80a28e0024f679e7d7bf824ce5c21d11'"
 msgstr ""
 "external ref='figures/zenity-notification-screenshot.png' "
-"md5='723bd2d1283f5a888967815991cbe858'"
+"md5='80a28e0024f679e7d7bf824ce5c21d11'"
 
 #. (itstool) path: page/p
 #: C/notification.page:50
@@ -1467,10 +1467,10 @@ msgstr ""
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-notification-listen-screenshot.png' "
-"md5='a1fe47d166ef20c0b35f9ba3ca15a03f'"
+"md5='80c7e8cc9b0c7552e0a619ce4ed8860f'"
 msgstr ""
 "external ref='figures/zenity-notification-listen-screenshot.png' "
-"md5='a1fe47d166ef20c0b35f9ba3ca15a03f'"
+"md5='80c7e8cc9b0c7552e0a619ce4ed8860f'"
 
 #. (itstool) path: info/desc
 #: C/password.page:6
@@ -1568,10 +1568,10 @@ msgstr "<app>Zenity</app> пароль енгізу сұхбат терезес�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-password-screenshot.png' "
-"md5='5555776db3dfda22137e5c0583e0f3da'"
+"md5='1e68530cf7e9a4619a19bb0975286861'"
 msgstr ""
 "external ref='figures/zenity-password-screenshot.png' "
-"md5='5555776db3dfda22137e5c0583e0f3da'"
+"md5='1e68530cf7e9a4619a19bb0975286861'"
 
 #. (itstool) path: info/desc
 #: C/progress.page:6
@@ -1720,10 +1720,10 @@ msgstr "<app>Zenity</app> барыс сұхбат терезесінің мыс�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-progress-screenshot.png' "
-"md5='a9f492a4c872ef2fe4484c310d78eb6a'"
+"md5='36e354438c786f811ad947549d4217a4'"
 msgstr ""
 "external ref='figures/zenity-progress-screenshot.png' "
-"md5='a9f492a4c872ef2fe4484c310d78eb6a'"
+"md5='36e354438c786f811ad947549d4217a4'"
 
 #. (itstool) path: info/desc
 #: C/question.page:6
@@ -1783,10 +1783,10 @@ msgstr "<app>Zenity</app> сұрақ сұхбат терезесінің мыс�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-question-screenshot.png' "
-"md5='962af0ddab7e11f11288e1f188066a84'"
+"md5='f2e9d583d28f596a40b223489360dcb2'"
 msgstr ""
 "external ref='figures/zenity-question-screenshot.png' "
-"md5='962af0ddab7e11f11288e1f188066a84'"
+"md5='f2e9d583d28f596a40b223489360dcb2'"
 
 #. (itstool) path: info/desc
 #: C/scale.page:6
@@ -1936,10 +1936,10 @@ msgstr "<app>Zenity</app> шкала сұхбат терезесінің мыс�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-scale-screenshot.png' "
-"md5='efab2668ba53b567551697665a34f7f8'"
+"md5='b22c493becb2dae3f0d1fc592ec31b29'"
 msgstr ""
 "external ref='figures/zenity-scale-screenshot.png' "
-"md5='efab2668ba53b567551697665a34f7f8'"
+"md5='b22c493becb2dae3f0d1fc592ec31b29'"
 
 #. (itstool) path: info/desc
 #: C/text.page:6
@@ -2101,10 +2101,10 @@ msgstr "<app>Zenity</app> мәтіндік ақпарат сұхбат тере�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-text-screenshot.png' "
-"md5='225d7ab143dc8fa5850ebd789eb5304f'"
+"md5='0c33edf27a2438cd526f08ffd30b15d8'"
 msgstr ""
 "external ref='figures/zenity-text-screenshot.png' "
-"md5='225d7ab143dc8fa5850ebd789eb5304f'"
+"md5='0c33edf27a2438cd526f08ffd30b15d8'"
 
 #. (itstool) path: info/desc
 #: C/usage.page:6
@@ -2651,7 +2651,23 @@ msgstr "<app>Zenity</app> ескерту сұхбат терезесінің м�
 msgctxt "_"
 msgid ""
 "external ref='figures/zenity-warning-screenshot.png' "
-"md5='a2d07437efca06b775ceae24816d96a6'"
+"md5='bcc2e22d74448ba62ea5882c007f0beb'"
 msgstr ""
 "external ref='figures/zenity-warning-screenshot.png' "
-"md5='a2d07437efca06b775ceae24816d96a6'"
+"md5='bcc2e22d74448ba62ea5882c007f0beb'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/zenity-entry-screenshot.png' "
+#~ "md5='d7698dcc8b153c1be72fe8324b79d0f4'"
+#~ msgstr ""
+#~ "external ref='figures/zenity-entry-screenshot.png' "
+#~ "md5='d7698dcc8b153c1be72fe8324b79d0f4'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/zenity-scale-screenshot.png' "
+#~ "md5='efab2668ba53b567551697665a34f7f8'"
+#~ msgstr ""
+#~ "external ref='figures/zenity-scale-screenshot.png' "
+#~ "md5='efab2668ba53b567551697665a34f7f8'"
