@@ -60,6 +60,7 @@ foreach h : check_headers
   cc.has_header(h, required: true)
 endforeach
 
+gtk_dep = dependency('gtk4', version: '>= 4.10')
 adw_dep = dependency('libadwaita-1', version: '>= 1.2')
 
 # Optional dependencies
