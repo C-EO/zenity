@@ -1041,6 +1041,13 @@ static GOptionEntry password_dialog_options[] =
 		&zenity_password_show_username,
 		N_ ("Display the username option"),
 		NULL},
+	{"text",
+		'\0',
+		G_OPTION_FLAG_NOALIAS,
+		G_OPTION_ARG_STRING,
+		&zenity_general_dialog_text,
+		N_ ("Set the dialog text (Since: 4.4)"),
+		N_ ("TEXT")},
 	{NULL}};
 
 static GOptionEntry color_selection_options[] =
