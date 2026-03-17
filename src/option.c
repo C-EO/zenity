@@ -2020,6 +2020,7 @@ zenity_password_post_callback (GOptionContext *context, GOptionGroup *group,
 	zenity_option_set_dialog_mode (zenity_password_active, MODE_PASSWORD);
 
 	if (results->mode == MODE_PASSWORD) {
+		results->password_data->dialog_text = zenity_general_dialog_text;
 		results->password_data->username = zenity_password_show_username;
 	} else {
 		if (zenity_password_show_username)
