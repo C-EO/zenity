@@ -7,14 +7,14 @@
 # ben <benbenhappy2008@gmail.com>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2012.
 # Mingcong Bai <jeffbai@aosc.xyz>, 2018.
-# lumingzh <lumingzh@qq.com>, 2023-2025.
+# lumingzh <lumingzh@qq.com>, 2023-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zenity master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/zenity/issues/\n"
-"POT-Creation-Date: 2025-01-30 16:44+0000\n"
-"PO-Revision-Date: 2025-02-04 10:32+0800\n"
+"POT-Creation-Date: 2026-03-17 15:48+0000\n"
+"PO-Revision-Date: 2026-03-23 08:42+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -22,13 +22,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 50.0\n"
 
-#: data/org.gnome.Zenity.desktop.in:3
+#: data/org.gnome.Zenity.desktop.in:2
 msgid "Zenity"
 msgstr "Zenity"
 
-#: data/org.gnome.Zenity.desktop.in:4
+#: data/org.gnome.Zenity.desktop.in:3
 msgid "Display dialog boxes from the command line"
 msgstr "从命令行显示对话框窗口"
 
@@ -37,10 +37,12 @@ msgid "Display dialog boxes from shell scripts"
 msgstr "在 Shell 脚本中显示对话框"
 
 #: src/calendar.c:90
+#, c-format
 msgid "Invalid date provided. Falling back to today's date.\n"
 msgstr "提供的日期无效。回退到今天的日期。\n"
 
-#: src/fileselection.c:45
+#: src/fileselection.c:41
+#, c-format
 msgid ""
 "Warning: the --extra-button option for --file-selection is deprecated and "
 "will be removed in a future version of zenity. Ignoring.\n"
@@ -48,19 +50,8 @@ msgstr ""
 "警告：用于 --file-selection 的 --extra-button 选项已废弃并将在未来的版本中移"
 "除。正在忽略。\n"
 
-#: src/fileselection.c:68 src/progress.c:356 src/zenity.ui:16 src/zenity.ui:54
-#: src/zenity.ui:89 src/zenity.ui:140 src/zenity.ui:178 src/zenity.ui:219
-#: src/zenity.ui:279 src/zenity.ui:386 src/zenity.ui:425 src/zenity.ui:463
-msgid "_OK"
-msgstr "确定(_O)"
-
-#: src/fileselection.c:69 src/progress.c:352 src/zenity.ui:15 src/zenity.ui:53
-#: src/zenity.ui:88 src/zenity.ui:139 src/zenity.ui:218 src/zenity.ui:385
-#: src/zenity.ui:462
-msgid "_Cancel"
-msgstr "取消(_C)"
-
 #: src/main.c:124
+#, c-format
 msgid "You must specify a dialog type. See 'zenity --help' for details\n"
 msgstr "您必须指定对话框类型。请参看“zenity --help”获得更多细节\n"
 
@@ -73,663 +64,688 @@ msgid "_Yes"
 msgstr "是(_Y)"
 
 #: src/notification.c:62
+#, c-format
 msgid "Could not parse message\n"
 msgstr "无法解析消息\n"
 
 #: src/notification.c:140
+#, c-format
 msgid "Could not parse command from stdin\n"
 msgstr "无法从 stdin 解析命令\n"
 
-#: src/option.c:170
+#: src/option.c:171
 msgid "Set the dialog title"
 msgstr "设置对话框标题"
 
-#: src/option.c:171
+#: src/option.c:172
 msgid "TITLE"
 msgstr "标题"
 
-#: src/option.c:177
+#: src/option.c:178
 msgid "Set the width"
 msgstr "设置宽度"
 
-#: src/option.c:178
+#: src/option.c:179
 msgid "WIDTH"
 msgstr "宽度"
 
-#: src/option.c:184
+#: src/option.c:185
 msgid "Set the height"
 msgstr "设置高度"
 
-#: src/option.c:185
+#: src/option.c:186
 msgid "HEIGHT"
 msgstr "高度"
 
-#: src/option.c:191
+#: src/option.c:192
 msgid "Set dialog timeout in seconds"
 msgstr "设置对话框超时秒数"
 
 #. Timeout for closing the dialog
-#: src/option.c:193
+#: src/option.c:194
 msgid "TIMEOUT"
 msgstr "超时"
 
-#: src/option.c:199
+#: src/option.c:200
 msgid "Set the label of the OK button"
 msgstr "设定“确定”按钮标签"
 
-#: src/option.c:200 src/option.c:207 src/option.c:214 src/option.c:259
-#: src/option.c:304 src/option.c:311 src/option.c:335 src/option.c:382
-#: src/option.c:491 src/option.c:587 src/option.c:608 src/option.c:625
-#: src/option.c:686 src/option.c:761 src/option.c:768 src/option.c:818
-#: src/option.c:865 src/option.c:1004
+#: src/option.c:201 src/option.c:208 src/option.c:215 src/option.c:267
+#: src/option.c:312 src/option.c:319 src/option.c:343 src/option.c:390
+#: src/option.c:499 src/option.c:595 src/option.c:616 src/option.c:633
+#: src/option.c:694 src/option.c:769 src/option.c:776 src/option.c:826
+#: src/option.c:873 src/option.c:1012 src/option.c:1050
 msgid "TEXT"
 msgstr "文字"
 
-#: src/option.c:206
+#: src/option.c:207
 msgid "Set the label of the Cancel button"
 msgstr "设定“取消”按钮标签"
 
-#: src/option.c:213
+#: src/option.c:214
 msgid "Add an extra button"
 msgstr "添加新按钮"
 
-#: src/option.c:220
+#: src/option.c:221
 msgid "Set the modal hint"
 msgstr "设置模态提示"
 
-#: src/option.c:227 src/option.c:473 src/option.c:569 src/option.c:607
+#: src/option.c:228
+msgid "Set the application identifier (Since: 4.4)"
+msgstr "设置应用程序标识符（始于：4.4）"
+
+#: src/option.c:235 src/option.c:481 src/option.c:577 src/option.c:615
 msgid "DEPRECATED; does nothing"
 msgstr "已废弃；什么也不做"
 
-#: src/option.c:228
+#: src/option.c:236
 msgid "WINDOW"
 msgstr "窗口"
 
-#: src/option.c:234 src/option.c:241
+#: src/option.c:242 src/option.c:249
 msgid "DEPRECATED; use `--icon`"
 msgstr "已废弃；使用“--icon”"
 
-#: src/option.c:235 src/option.c:242 src/option.c:342 src/option.c:389
-#: src/option.c:594 src/option.c:693 src/option.c:825
+#: src/option.c:243 src/option.c:250 src/option.c:350 src/option.c:397
+#: src/option.c:602 src/option.c:701 src/option.c:833
 msgid "ICON-NAME"
 msgstr "图标名"
 
-#: src/option.c:251
+#: src/option.c:259
 msgid "Display calendar dialog"
 msgstr "显示日历对话框"
 
-#: src/option.c:258 src/option.c:303 src/option.c:334 src/option.c:381
-#: src/option.c:490 src/option.c:624 src/option.c:685 src/option.c:817
-#: src/option.c:864 src/option.c:1003
+#: src/option.c:266 src/option.c:311 src/option.c:342 src/option.c:389
+#: src/option.c:498 src/option.c:632 src/option.c:693 src/option.c:825
+#: src/option.c:872 src/option.c:1011
 msgid "Set the dialog text"
 msgstr "设置对话框文字"
 
-#: src/option.c:265
+#: src/option.c:273
 msgid "Set the calendar day"
 msgstr "设置日"
 
-#: src/option.c:266
+#: src/option.c:274
 msgid "DAY"
 msgstr "日"
 
-#: src/option.c:272
+#: src/option.c:280
 msgid "Set the calendar month"
 msgstr "设置月份"
 
-#: src/option.c:273
+#: src/option.c:281
 msgid "MONTH"
 msgstr "月份"
 
-#: src/option.c:279
+#: src/option.c:287
 msgid "Set the calendar year"
 msgstr "设置年份"
 
-#: src/option.c:280
+#: src/option.c:288
 msgid "YEAR"
 msgstr "年份"
 
-#: src/option.c:286 src/option.c:1017
+#: src/option.c:294 src/option.c:1025
 msgid "Set the format for the returned date"
 msgstr "设置返回日期的格式"
 
-#: src/option.c:287 src/option.c:1018
+#: src/option.c:295 src/option.c:1026
 msgid "PATTERN"
 msgstr "模式"
 
-#: src/option.c:296
+#: src/option.c:304
 msgid "Display text entry dialog"
 msgstr "显示文本输入对话框"
 
-#: src/option.c:310
+#: src/option.c:318
 msgid "Set the entry text"
 msgstr "设置输入文字"
 
-#: src/option.c:317
+#: src/option.c:325
 msgid "Hide the entry text"
 msgstr "隐藏输入文字"
 
-#: src/option.c:327
+#: src/option.c:335
 msgid "Display error dialog"
 msgstr "显示错误对话框"
 
-#: src/option.c:341 src/option.c:388 src/option.c:593 src/option.c:692
-#: src/option.c:824
+#: src/option.c:349 src/option.c:396 src/option.c:601 src/option.c:700
+#: src/option.c:832
 msgid "Set the icon name"
 msgstr "设置图标名称"
 
-#: src/option.c:348 src/option.c:395 src/option.c:699 src/option.c:831
+#: src/option.c:356 src/option.c:403 src/option.c:707 src/option.c:839
 msgid "Do not enable text wrapping"
 msgstr "不启用文本自动换行"
 
-#: src/option.c:355 src/option.c:402 src/option.c:706 src/option.c:838
+#: src/option.c:363 src/option.c:410 src/option.c:714 src/option.c:846
 msgid "Do not enable Pango markup"
 msgstr "不启用 pango 标记"
 
-#: src/option.c:362 src/option.c:409 src/option.c:720 src/option.c:845
+#: src/option.c:370 src/option.c:417 src/option.c:728 src/option.c:853
 msgid ""
 "Enable ellipsizing in the dialog text. This fixes the high window size with "
 "long texts"
 msgstr "在对话框文本中启用简略显示。这可以修复带有长文本的窗口的尺寸过大"
 
-#: src/option.c:374
+#: src/option.c:382
 msgid "Display info dialog"
 msgstr "显示信息对话框"
 
-#: src/option.c:421
+#: src/option.c:429
 msgid "Display file selection dialog"
 msgstr "显示文件选择对话框"
 
-#: src/option.c:428
+#: src/option.c:436
 msgid "Set the filename"
 msgstr "设置文件名"
 
-#: src/option.c:429 src/option.c:747
+#: src/option.c:437 src/option.c:755
 msgid "FILENAME"
 msgstr "文件名"
 
-#: src/option.c:435
+#: src/option.c:443
 msgid "Allow multiple files to be selected"
 msgstr "允许选中多个文件"
 
-#: src/option.c:442
+#: src/option.c:450
 msgid "Activate directory-only selection"
 msgstr "允许只选择文件夹"
 
-#: src/option.c:449
+#: src/option.c:457
 msgid "Activate save mode"
 msgstr "激活保存模式"
 
-#: src/option.c:456 src/option.c:525 src/option.c:1010
+#: src/option.c:464 src/option.c:533 src/option.c:1018
 msgid "Set output separator character"
 msgstr "设置输出分隔符"
 
-#: src/option.c:457 src/option.c:526 src/option.c:1011
+#: src/option.c:465 src/option.c:534 src/option.c:1019
 msgid "SEPARATOR"
 msgstr "分隔符"
 
-#: src/option.c:463
+#: src/option.c:471
 msgid "Set a filename filter"
 msgstr "设置文件名过滤器"
 
 #. Help for file-filter argument (name and patterns for file
 #. selection)
-#: src/option.c:466
+#: src/option.c:474
 msgid "NAME | PATTERN1 PATTERN2 ..."
 msgstr "名称 | 模式1 模式2 …"
 
-#: src/option.c:483
+#: src/option.c:491
 msgid "Display list dialog"
 msgstr "显示列表对话框"
 
-#: src/option.c:497
+#: src/option.c:505
 msgid "Set the column header"
 msgstr "设置列标题"
 
-#: src/option.c:498
+#: src/option.c:506
 msgid "COLUMN"
 msgstr "列"
 
-#: src/option.c:504
+#: src/option.c:512
 msgid "Use check boxes for the first column"
 msgstr "第一列使用复选框"
 
-#: src/option.c:511
+#: src/option.c:519
 msgid "Use radio buttons for the first column"
 msgstr "第一列使用单选钮"
 
-#: src/option.c:518
+#: src/option.c:526
 msgid "Use an image for the first column"
 msgstr "第一列使用图像"
 
-#: src/option.c:532
+#: src/option.c:540
 msgid "Allow multiple rows to be selected"
 msgstr "允许选中多行"
 
-#: src/option.c:539 src/option.c:753
+#: src/option.c:547 src/option.c:761
 msgid "Allow changes to text"
 msgstr "允许更改文字"
 
-#: src/option.c:546
+#: src/option.c:554
 msgid ""
 "Print a specific column (Default is 1. 'ALL' can be used to print all "
 "columns)"
 msgstr "打印指定列(默认为 1。“全部”可用于打印全部列)"
 
 #. Column index number to print out on a list dialog
-#: src/option.c:549 src/option.c:556
+#: src/option.c:557 src/option.c:564
 msgid "NUMBER"
 msgstr "序号"
 
-#: src/option.c:555
+#: src/option.c:563
 msgid "Hide a specific column"
 msgstr "隐藏指定列"
 
-#: src/option.c:562
+#: src/option.c:570
 msgid "Hide the column headers"
 msgstr "隐藏列头"
 
-#: src/option.c:579
+#: src/option.c:587
 msgid "Display notification"
 msgstr "显示通知"
 
-#: src/option.c:586
+#: src/option.c:594
 msgid "Set the notification text"
 msgstr "设定通知文字"
 
-#: src/option.c:600
+#: src/option.c:608
 msgid "Listen for commands on stdin"
 msgstr "在 stdin 上监听命令"
 
-#: src/option.c:617
+#: src/option.c:625
 msgid "Display progress indication dialog"
 msgstr "显示进度指示对话框"
 
-#: src/option.c:631
+#: src/option.c:639
 msgid "Set initial percentage"
 msgstr "设定初始百分比"
 
-#: src/option.c:632
+#: src/option.c:640
 msgid "PERCENTAGE"
 msgstr "百分比"
 
-#: src/option.c:638
+#: src/option.c:646
 msgid "Pulsate progress bar"
 msgstr "跳动进度条"
 
-#: src/option.c:646
+#: src/option.c:654
 #, no-c-format
 msgid "Dismiss the dialog when 100% has been reached"
 msgstr "达到 100% 时关闭对话框"
 
-#: src/option.c:653
+#: src/option.c:661
 msgid "Kill parent process if Cancel button is pressed"
 msgstr "若按下取消按钮则终止父进程"
 
-#: src/option.c:660
+#: src/option.c:668
 msgid "Hide Cancel button"
 msgstr "隐藏取消按钮"
 
-#: src/option.c:668
+#: src/option.c:676
 #, no-c-format
 msgid "Estimate when progress will reach 100%"
 msgstr "在进度快到 100% 时进行预估"
 
-#: src/option.c:678
+#: src/option.c:686
 msgid "Display question dialog"
 msgstr "显示问题对话框"
 
-#: src/option.c:713
+#: src/option.c:721
 msgid "Give Cancel button focus by default"
 msgstr "\"取消\"按钮默认取得焦点"
 
-#: src/option.c:729
+#: src/option.c:737
 msgid "Suppress OK and Cancel buttons"
 msgstr "隐藏确定和取消按钮"
 
-#: src/option.c:739
+#: src/option.c:747
 msgid "Display text information dialog"
 msgstr "显示文本信息对话框"
 
-#: src/option.c:746
+#: src/option.c:754
 msgid "Open file"
 msgstr "打开文件"
 
-#: src/option.c:760
+#: src/option.c:768
 msgid "Set the text font"
 msgstr "设置文本字体"
 
-#: src/option.c:767
+#: src/option.c:775
 msgid "Enable an I read and agree checkbox"
 msgstr "启用 我已阅读并同意 复选框"
 
-#: src/option.c:775
+#: src/option.c:783
 msgid "Enable HTML support"
 msgstr "启用 HTML 支持"
 
-#: src/option.c:782
+#: src/option.c:790
 msgid ""
 "Do not enable user interaction with the WebView. Only works if you use --"
 "html option"
 msgstr "不让用户与 WebView 进行交互。只在使用 --html 选项时有效"
 
-#: src/option.c:790
+#: src/option.c:798
 msgid "Set an URL instead of a file. Only works if you use --html option"
 msgstr "设置一个 URL 而非一个文件。只在使用 --html 选项时有效"
 
-#: src/option.c:792
+#: src/option.c:800
 msgid "URL"
 msgstr "URL"
 
-#: src/option.c:799
+#: src/option.c:807
 msgid "Auto scroll the text to the end. Only when text is captured from stdin"
 msgstr "自动滚动文本到末尾。只适于文本从标准输入获取的情况"
 
-#: src/option.c:810
+#: src/option.c:818
 msgid "Display warning dialog"
 msgstr "显示警告对话框"
 
-#: src/option.c:857
+#: src/option.c:865
 msgid "Display scale dialog"
 msgstr "显示范围对话框"
 
-#: src/option.c:871
+#: src/option.c:879
 msgid "Set initial value"
 msgstr "设置初始值"
 
-#: src/option.c:872 src/option.c:879 src/option.c:886 src/option.c:893
-#: src/option.c:1052
+#: src/option.c:880 src/option.c:887 src/option.c:894 src/option.c:901
+#: src/option.c:1067
 msgid "VALUE"
 msgstr "数值"
 
-#: src/option.c:878
+#: src/option.c:886
 msgid "Set minimum value"
 msgstr "设置最小值"
 
-#: src/option.c:885
+#: src/option.c:893
 msgid "Set maximum value"
 msgstr "设置最大值"
 
-#: src/option.c:892
+#: src/option.c:900
 msgid "Set step size"
 msgstr "设置步进大小"
 
-#: src/option.c:899
+#: src/option.c:907
 msgid "Print partial values"
 msgstr "打印部分值"
 
-#: src/option.c:906
+#: src/option.c:914
 msgid "Hide value"
 msgstr "隐藏值"
 
-#: src/option.c:916
+#: src/option.c:924
 msgid "Display forms dialog"
 msgstr "显示表单对话框"
 
-#: src/option.c:923
+#: src/option.c:931
 msgid "Add a new Entry in forms dialog"
 msgstr "在表单对话框中添加新条目"
 
-#: src/option.c:924 src/option.c:931 src/option.c:938
+#: src/option.c:932 src/option.c:939 src/option.c:946
 msgid "Field name"
 msgstr "域名称"
 
-#: src/option.c:930
+#: src/option.c:938
 msgid "Add a new Password Entry in forms dialog"
 msgstr "在表单对话框中添加新密码条目"
 
-#: src/option.c:937
+#: src/option.c:945
 msgid "Add a new multi-line entry in forms dialog (Since: 4.2)"
 msgstr "在表单对话框中添加新的多行条目（始于：4.2）"
 
-#: src/option.c:944
+#: src/option.c:952
 msgid "Add a new Calendar in forms dialog"
 msgstr "在表单对话框中添加一个新日历"
 
-#: src/option.c:945
+#: src/option.c:953
 msgid "Calendar field name"
 msgstr "日历域名称"
 
-#: src/option.c:951
+#: src/option.c:959
 msgid "Add a new List in forms dialog"
 msgstr "在表单对话框中添加列表"
 
-#: src/option.c:952
+#: src/option.c:960
 msgid "List field and header name"
 msgstr "列表域和标题名"
 
-#: src/option.c:958
+#: src/option.c:966
 msgid "List of values for List"
 msgstr "列表值的列表"
 
-#: src/option.c:959 src/option.c:966 src/option.c:980
+#: src/option.c:967 src/option.c:974 src/option.c:988
 msgid "List of values separated by |"
 msgstr "| 分隔的列表值"
 
-#: src/option.c:965
+#: src/option.c:973
 msgid "List of values for columns"
 msgstr "列值的列表"
 
-#: src/option.c:972
+#: src/option.c:980
 msgid "Add a new combo box in forms dialog"
 msgstr "在表单对话框中添加新组合框"
 
-#: src/option.c:973
+#: src/option.c:981
 msgid "Combo box field name"
 msgstr "组合框域名称"
 
-#: src/option.c:979
+#: src/option.c:987
 msgid "List of values for combo box"
 msgstr "组合框值列表"
 
-#: src/option.c:996
+#: src/option.c:1004
 msgid "Show the columns header"
 msgstr "显示列标题"
 
-#: src/option.c:1027
+#: src/option.c:1035
 msgid "Display password dialog"
 msgstr "显示口令对话框"
 
-#: src/option.c:1034
+#: src/option.c:1042
 msgid "Display the username option"
 msgstr "显示用户名选项"
 
-#: src/option.c:1044
+#: src/option.c:1049
+msgid "Set the dialog text (Since: 4.4)"
+msgstr "设置对话框文本（始于：4.4）"
+
+#: src/option.c:1059
 msgid "Display color selection dialog"
 msgstr "显示颜色选择对话框"
 
-#: src/option.c:1051
+#: src/option.c:1066
 msgid "Set the color"
 msgstr "设定颜色"
 
-#: src/option.c:1058
+#: src/option.c:1073
 msgid "Show the palette"
 msgstr "显示调色板"
 
-#: src/option.c:1068
+#: src/option.c:1083
 msgid "About zenity"
 msgstr "关于 zenity"
 
-#: src/option.c:1075
+#: src/option.c:1090
 msgid "Print version"
 msgstr "打印版本"
 
-#: src/option.c:1086
+#: src/option.c:1101
+#, c-format
 msgid ""
 "Warning: --icon-name is deprecated and will be removed in a future version "
 "of zenity; Treating as --icon.\n"
 msgstr "警告：--icon-name 已废弃并将在未来的版本中移除；作为 --icon 处理。\n"
 
-#: src/option.c:1093
+#: src/option.c:1108
+#, c-format
 msgid ""
 "Warning: --window-icon is deprecated and will be removed in a future version "
 "of zenity; Treating as --icon.\n"
 msgstr "警告：--window-icon 已废弃并将在未来的版本中移除；作为 --icon 处理。\n"
 
-#: src/option.c:1100
+#: src/option.c:1115
+#, c-format
 msgid ""
 "Warning: --confirm-overwrite is deprecated and will be removed in a future "
 "version of zenity. Ignoring.\n"
 msgstr "警告：--confirm-overwrite 已废弃并将在未来的版本中移除。正在忽略。\n"
 
-#: src/option.c:1107
+#: src/option.c:1122
+#, c-format
 msgid ""
 "Warning: --attach is deprecated and will be removed in a future version of "
 "zenity. Ignoring.\n"
 msgstr "警告：--attach 已废弃并将在未来的版本中移除。正在忽略。\n"
 
-#: src/option.c:1114
+#: src/option.c:1129
+#, c-format
 msgid ""
 "Warning: --hint is deprecated and will be removed in a future version of "
 "zenity. Ignoring.\n"
 msgstr "警告：--hint 已废弃并将在未来的版本中移除。正在忽略。\n"
 
-#: src/option.c:2037
+#: src/option.c:1452
+#, c-format
+msgid ""
+"Warning: the application ID passed to --app-id is not valid. Falling back to "
+"the default generic ID.\n"
+msgstr ""
+"警告：传递至 --app-id 的应用程序标识符无效。将回退至默认的通用标识符。\n"
+
+#: src/option.c:2062
 msgid "General options"
 msgstr "常规选项"
 
-#: src/option.c:2038
+#: src/option.c:2063
 msgid "Show general options"
 msgstr "显示常规选项"
 
-#: src/option.c:2050
+#: src/option.c:2075
 msgid "Calendar options"
 msgstr "日历选项"
 
-#: src/option.c:2051
+#: src/option.c:2076
 msgid "Show calendar options"
 msgstr "显示日历选项"
 
-#: src/option.c:2063
+#: src/option.c:2088
 msgid "Text entry options"
 msgstr "文字输入选项"
 
-#: src/option.c:2064
+#: src/option.c:2089
 msgid "Show text entry options"
 msgstr "显示文字输入选项"
 
-#: src/option.c:2076
+#: src/option.c:2101
 msgid "Error options"
 msgstr "错误选项"
 
-#: src/option.c:2076
+#: src/option.c:2101
 msgid "Show error options"
 msgstr "显示错误选项"
 
-#: src/option.c:2086
+#: src/option.c:2111
 msgid "Info options"
 msgstr "信息选项"
 
-#: src/option.c:2086
+#: src/option.c:2111
 msgid "Show info options"
 msgstr "显示信息选项"
 
-#: src/option.c:2096
+#: src/option.c:2121
 msgid "File selection options"
 msgstr "文件选择选项"
 
-#: src/option.c:2097
+#: src/option.c:2122
 msgid "Show file selection options"
 msgstr "显示文件选择选项"
 
-#: src/option.c:2109
+#: src/option.c:2134
 msgid "List options"
 msgstr "列表选项"
 
-#: src/option.c:2109
+#: src/option.c:2134
 msgid "Show list options"
 msgstr "显示列表选项"
 
-#: src/option.c:2119
+#: src/option.c:2144
 msgid "Notification options"
 msgstr "通知选项"
 
-#: src/option.c:2120
+#: src/option.c:2145
 msgid "Show notification options"
 msgstr "显示通知选项"
 
-#: src/option.c:2133
+#: src/option.c:2158
 msgid "Progress options"
 msgstr "进度选项"
 
-#: src/option.c:2134
+#: src/option.c:2159
 msgid "Show progress options"
 msgstr "显示进度选项"
 
-#: src/option.c:2146
+#: src/option.c:2171
 msgid "Question options"
 msgstr "问题选项"
 
-#: src/option.c:2147
+#: src/option.c:2172
 msgid "Show question options"
 msgstr "显示问题选项"
 
-#: src/option.c:2159
+#: src/option.c:2184
 msgid "Warning options"
 msgstr "警告选项"
 
-#: src/option.c:2160
+#: src/option.c:2185
 msgid "Show warning options"
 msgstr "显示警告选项"
 
-#: src/option.c:2172
+#: src/option.c:2197
 msgid "Scale options"
 msgstr "范围选项"
 
-#: src/option.c:2172
+#: src/option.c:2197
 msgid "Show scale options"
 msgstr "显示范围选项"
 
-#: src/option.c:2182
+#: src/option.c:2207
 msgid "Text information options"
 msgstr "文本信息选项"
 
-#: src/option.c:2183
+#: src/option.c:2208
 msgid "Show text information options"
 msgstr "显示文本信息选项"
 
-#: src/option.c:2195
+#: src/option.c:2220
 msgid "Color selection options"
 msgstr "颜色选择选项"
 
-#: src/option.c:2196
+#: src/option.c:2221
 msgid "Show color selection options"
 msgstr "显示颜色选择选项"
 
-#: src/option.c:2208
+#: src/option.c:2233
 msgid "Password dialog options"
 msgstr "口令对话框选项"
 
-#: src/option.c:2209
+#: src/option.c:2234
 msgid "Show password dialog options"
 msgstr "显示口令对话框选项"
 
-#: src/option.c:2221
+#: src/option.c:2246
 msgid "Forms dialog options"
 msgstr "表单对话框选项"
 
-#: src/option.c:2222
+#: src/option.c:2247
 msgid "Show forms dialog options"
 msgstr "显示表单对话框选项"
 
-#: src/option.c:2234
+#: src/option.c:2259
 msgid "Miscellaneous options"
 msgstr "杂类选项"
 
-#: src/option.c:2235
+#: src/option.c:2260
 msgid "Show miscellaneous options"
 msgstr "显示杂类选项"
 
-#: src/option.c:2258
+#: src/option.c:2283
+#, c-format
 msgid ""
 "This option is not available. Please see --help for all possible usages.\n"
 msgstr "此选项不可用。请参看 --help 了解所有能用的用法。\n"
 
-#: src/option.c:2263
+#: src/option.c:2288
 #, c-format
 msgid "--%s is not supported for this dialog\n"
 msgstr "此对话框不支持 --%s\n"
 
-#: src/option.c:2267
+#: src/option.c:2292
+#, c-format
 msgid "Two or more dialog options specified\n"
 msgstr "指定了两个或更多对话框选项\n"
 
@@ -740,11 +756,11 @@ msgstr "输入您的用户名和密码"
 #. Add the username label and entry and increment the row for the
 #. * password entry so it will be added below the username.
 #.
-#: src/password.c:90
+#: src/password.c:95
 msgid "Username:"
 msgstr "用户名："
 
-#: src/password.c:105
+#: src/password.c:110
 msgid "Password:"
 msgstr "密码："
 
@@ -753,35 +769,52 @@ msgstr "密码："
 msgid "Time remaining: %lu:%02lu:%02lu"
 msgstr "剩余时间：%lu:%02lu:%02lu"
 
+#: src/progress.c:352 src/zenity.ui:15 src/zenity.ui:53 src/zenity.ui:88
+#: src/zenity.ui:139 src/zenity.ui:218 src/zenity.ui:385 src/zenity.ui:462
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: src/progress.c:356 src/zenity.ui:16 src/zenity.ui:54 src/zenity.ui:89
+#: src/zenity.ui:140 src/zenity.ui:178 src/zenity.ui:219 src/zenity.ui:279
+#: src/zenity.ui:386 src/zenity.ui:425 src/zenity.ui:463
+msgid "_OK"
+msgstr "确定(_O)"
+
 #. Translators: do not translate tokens starting with '--'; these
 #. * are command-line options which are not translatable.
 #.
 #: src/progress.c:373
+#, c-format
 msgid ""
 "Combining the options --auto-close and --percentage=100 is not supported.\n"
 msgstr "不支持组合选项 --auto-close 和 --percentage=100。\n"
 
 #: src/scale.c:62
+#, c-format
 msgid "Maximum value must be greater than minimum value.\n"
 msgstr "最大值必须大于最小值。\n"
 
 #: src/scale.c:70
+#, c-format
 msgid "Value out of range.\n"
 msgstr "超出范围。\n"
 
 #: src/tree.c:57
+#, c-format
 msgid ""
 "Warning: --mid-search is deprecated and will be removed in a future version "
 "of zenity. Ignoring.\n"
 msgstr "警告：--mid-search 已废弃并将在未来的版本中移除。正在忽略。\n"
 
 #: src/tree.c:263
+#, c-format
 msgid "No column titles specified for List dialog.\n"
 msgstr "列表对话框未指定列标题。\n"
 
 #. Translators: --checklist and --radiolist should not be translated
 #. * (command-line options).
 #: src/tree.c:272
+#, c-format
 msgid ""
 "Insufficient columns specified for List dialog (at least 2 are required for "
 "--checklist or --radiolist).\n"
@@ -790,6 +823,7 @@ msgstr ""
 "radiolist）。\n"
 
 #: src/tree.c:280
+#, c-format
 msgid "You should use only one List dialog type.\n"
 msgstr "您应该只使用一种列表对话框类型。\n"
 
