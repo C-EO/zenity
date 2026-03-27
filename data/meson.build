@@ -32,6 +32,7 @@ if help2man.found() and not meson.is_cross_build() and get_option('manpage')
     '--no-info',
     '--section=1',
     '--help-option=--help-all',
+    '--name=display dialog boxes from the command line',
     '--include=@INPUT@',
   ]
 
