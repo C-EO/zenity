@@ -5,14 +5,15 @@
 # Слободан Д. Средојевић <slobo@akrep.be> 2005.
 # Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011-2025.
 # Милош Поповић <gpopac@gmail.com>, 2010-2015.
+# Марко Костић <marko.m.kostic@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: zenity\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/zenity/issues/\n"
-"POT-Creation-Date: 2025-01-13 06:10+0000\n"
-"PO-Revision-Date: 2025-01-26 12:53+0100\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"POT-Creation-Date: 2026-03-27 14:43+0000\n"
+"PO-Revision-Date: 2026-04-02 07:40+0200\n"
+"Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnom@prevod.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -21,13 +22,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 
-#: data/org.gnome.Zenity.desktop.in:3
+#: data/org.gnome.Zenity.desktop.in:2
 msgid "Zenity"
 msgstr "Зенит"
 
-#: data/org.gnome.Zenity.desktop.in:4
+#: data/org.gnome.Zenity.desktop.in:3
 msgid "Display dialog boxes from the command line"
 msgstr "Приказује прозорче са линије наредби"
 
@@ -35,11 +36,13 @@ msgstr "Приказује прозорче са линије наредби"
 msgid "Display dialog boxes from shell scripts"
 msgstr "Приказује прозорче из скрипти шкољке"
 
-#: src/calendar.c:90
+#: src/calendar.c:91
+#, c-format
 msgid "Invalid date provided. Falling back to today's date.\n"
 msgstr "Достављен је нетачан датум. Враћам се на данашњи датум.\n"
 
-#: src/fileselection.c:45
+#: src/fileselection.c:41
+#, c-format
 msgid ""
 "Warning: the --extra-button option for --file-selection is deprecated and "
 "will be removed in a future version of zenity. Ignoring.\n"
@@ -47,19 +50,8 @@ msgstr ""
 "Упозорење: Опција  „--extra-button“ за „--file-selektion“ је застарела и "
 "биће уклоњена у будућим издањима зенита. Занемарујем.\n"
 
-#: src/fileselection.c:68 src/progress.c:356 src/zenity.ui:16 src/zenity.ui:54
-#: src/zenity.ui:89 src/zenity.ui:140 src/zenity.ui:178 src/zenity.ui:219
-#: src/zenity.ui:279 src/zenity.ui:386 src/zenity.ui:425 src/zenity.ui:463
-msgid "_OK"
-msgstr "_У реду"
-
-#: src/fileselection.c:69 src/progress.c:352 src/zenity.ui:15 src/zenity.ui:53
-#: src/zenity.ui:88 src/zenity.ui:139 src/zenity.ui:218 src/zenity.ui:385
-#: src/zenity.ui:462
-msgid "_Cancel"
-msgstr "_Откажи"
-
 #: src/main.c:124
+#, c-format
 msgid "You must specify a dialog type. See 'zenity --help' for details\n"
 msgstr ""
 "Морате одредити врсту прозорчета. За детаље погледајте „zenity --help‟\n"
@@ -73,160 +65,166 @@ msgid "_Yes"
 msgstr "_Да"
 
 #: src/notification.c:62
+#, c-format
 msgid "Could not parse message\n"
 msgstr "Не могу да обрадим поруку\n"
 
 #: src/notification.c:140
+#, c-format
 msgid "Could not parse command from stdin\n"
 msgstr "Не могу да обрадим наредбу са стандардног улаза\n"
 
-#: src/option.c:170
+#: src/option.c:171
 msgid "Set the dialog title"
 msgstr "Поставља наслов прозорчета"
 
-#: src/option.c:171
+#: src/option.c:172
 msgid "TITLE"
 msgstr "НАСЛОВ"
 
-#: src/option.c:177
+#: src/option.c:178
 msgid "Set the width"
 msgstr "Поставља ширину"
 
-#: src/option.c:178
+#: src/option.c:179
 msgid "WIDTH"
 msgstr "ШИРИНА"
 
-#: src/option.c:184
+#: src/option.c:185
 msgid "Set the height"
 msgstr "Поставља висину"
 
-#: src/option.c:185
+#: src/option.c:186
 msgid "HEIGHT"
 msgstr "ВИСИНА"
 
-#: src/option.c:191
+#: src/option.c:192
 msgid "Set dialog timeout in seconds"
 msgstr "Поставља временски рок прозорчета у секундама"
 
 # Где, шта, где, ко???
 #. Timeout for closing the dialog
-#: src/option.c:193
+#: src/option.c:194
 msgid "TIMEOUT"
 msgstr "ВРЕМЕНСКИ РОК"
 
-#: src/option.c:199
+#: src/option.c:200
 msgid "Set the label of the OK button"
 msgstr "Поставите натпис дугмета „У реду“"
 
-#: src/option.c:200 src/option.c:207 src/option.c:214 src/option.c:259
-#: src/option.c:304 src/option.c:311 src/option.c:335 src/option.c:382
-#: src/option.c:491 src/option.c:587 src/option.c:608 src/option.c:625
-#: src/option.c:686 src/option.c:761 src/option.c:768 src/option.c:818
-#: src/option.c:865 src/option.c:997
+#: src/option.c:201 src/option.c:208 src/option.c:215 src/option.c:267
+#: src/option.c:312 src/option.c:319 src/option.c:343 src/option.c:390
+#: src/option.c:499 src/option.c:595 src/option.c:616 src/option.c:633
+#: src/option.c:694 src/option.c:769 src/option.c:776 src/option.c:826
+#: src/option.c:873 src/option.c:1012 src/option.c:1050
 msgid "TEXT"
 msgstr "ТЕКСТ"
 
-#: src/option.c:206
+#: src/option.c:207
 msgid "Set the label of the Cancel button"
 msgstr "Поставите натпис дугмета „Откажи“"
 
-#: src/option.c:213
+#: src/option.c:214
 msgid "Add an extra button"
 msgstr "Додај још једно дугме"
 
-#: src/option.c:220
+#: src/option.c:221
 msgid "Set the modal hint"
 msgstr "Поставља условљени савет"
 
-#: src/option.c:227 src/option.c:473 src/option.c:569 src/option.c:607
+#: src/option.c:228
+msgid "Set the application identifier (Since: 4.4)"
+msgstr "Поставите идентификатор програма (од: 4.4)"
+
+#: src/option.c:235 src/option.c:481 src/option.c:577 src/option.c:615
 msgid "DEPRECATED; does nothing"
 msgstr "ЗАСТАРЕЛО; не ради ништа"
 
-#: src/option.c:228
+#: src/option.c:236
 msgid "WINDOW"
 msgstr "ПРОЗОР"
 
-#: src/option.c:234 src/option.c:241
+#: src/option.c:242 src/option.c:249
 msgid "DEPRECATED; use `--icon`"
 msgstr "ЗАСТАРЕЛО; користите „--icon“"
 
-#: src/option.c:235 src/option.c:242 src/option.c:342 src/option.c:389
-#: src/option.c:594 src/option.c:693 src/option.c:825
+#: src/option.c:243 src/option.c:250 src/option.c:350 src/option.c:397
+#: src/option.c:602 src/option.c:701 src/option.c:833
 msgid "ICON-NAME"
 msgstr "НАЗИВ ИКОНИЦЕ"
 
-#: src/option.c:251
+#: src/option.c:259
 msgid "Display calendar dialog"
 msgstr "Приказује прозорче календара"
 
-#: src/option.c:258 src/option.c:303 src/option.c:334 src/option.c:381
-#: src/option.c:490 src/option.c:624 src/option.c:685 src/option.c:817
-#: src/option.c:864 src/option.c:996
+#: src/option.c:266 src/option.c:311 src/option.c:342 src/option.c:389
+#: src/option.c:498 src/option.c:632 src/option.c:693 src/option.c:825
+#: src/option.c:872 src/option.c:1011
 msgid "Set the dialog text"
 msgstr "Поставља текст прозорчета"
 
-#: src/option.c:265
+#: src/option.c:273
 msgid "Set the calendar day"
 msgstr "Поставља дан у календару"
 
-#: src/option.c:266
+#: src/option.c:274
 msgid "DAY"
 msgstr "ДАН"
 
-#: src/option.c:272
+#: src/option.c:280
 msgid "Set the calendar month"
 msgstr "Поставља месец у календару"
 
-#: src/option.c:273
+#: src/option.c:281
 msgid "MONTH"
 msgstr "МЕСЕЦ"
 
-#: src/option.c:279
+#: src/option.c:287
 msgid "Set the calendar year"
 msgstr "Поставља годину у календару"
 
-#: src/option.c:280
+#: src/option.c:288
 msgid "YEAR"
 msgstr "ГОДИНА"
 
-#: src/option.c:286 src/option.c:1010
+#: src/option.c:294 src/option.c:1025
 msgid "Set the format for the returned date"
 msgstr "Поставља формат повратног датума"
 
-#: src/option.c:287 src/option.c:1011
+#: src/option.c:295 src/option.c:1026
 msgid "PATTERN"
 msgstr "ОБРАЗАЦ"
 
-#: src/option.c:296
+#: src/option.c:304
 msgid "Display text entry dialog"
 msgstr "Приказује прозорче за унос текста"
 
-#: src/option.c:310
+#: src/option.c:318
 msgid "Set the entry text"
 msgstr "Поставља текст за унос"
 
-#: src/option.c:317
+#: src/option.c:325
 msgid "Hide the entry text"
 msgstr "Скрива текст за унос"
 
-#: src/option.c:327
+#: src/option.c:335
 msgid "Display error dialog"
 msgstr "Приказује прозорче за грешке"
 
-#: src/option.c:341 src/option.c:388 src/option.c:593 src/option.c:692
-#: src/option.c:824
+#: src/option.c:349 src/option.c:396 src/option.c:601 src/option.c:700
+#: src/option.c:832
 msgid "Set the icon name"
 msgstr "Поставља назив иконице"
 
-#: src/option.c:348 src/option.c:395 src/option.c:699 src/option.c:831
+#: src/option.c:356 src/option.c:403 src/option.c:707 src/option.c:839
 msgid "Do not enable text wrapping"
 msgstr "Не укључује прелом текста"
 
-#: src/option.c:355 src/option.c:402 src/option.c:706 src/option.c:838
+#: src/option.c:363 src/option.c:410 src/option.c:714 src/option.c:846
 msgid "Do not enable Pango markup"
 msgstr "Не укључуј Панго ознаке"
 
-#: src/option.c:362 src/option.c:409 src/option.c:720 src/option.c:845
+#: src/option.c:370 src/option.c:417 src/option.c:728 src/option.c:853
 msgid ""
 "Enable ellipsizing in the dialog text. This fixes the high window size with "
 "long texts"
@@ -234,85 +232,85 @@ msgstr ""
 "Укључује скраћивање у тексту прозорчета. Ово поправља висину прозора код "
 "дугих текстова"
 
-#: src/option.c:374
+#: src/option.c:382
 msgid "Display info dialog"
 msgstr "Приказује прозорче информација"
 
-#: src/option.c:421
+#: src/option.c:429
 msgid "Display file selection dialog"
 msgstr "Приказује прозорче за избор датотеке"
 
-#: src/option.c:428
+#: src/option.c:436
 msgid "Set the filename"
 msgstr "Поставља назив датотеке"
 
-#: src/option.c:429 src/option.c:747
+#: src/option.c:437 src/option.c:755
 msgid "FILENAME"
 msgstr "НАЗИВ ДАТОТЕКЕ"
 
-#: src/option.c:435
+#: src/option.c:443
 msgid "Allow multiple files to be selected"
 msgstr "Дозвољава избор више датотека"
 
-#: src/option.c:442
+#: src/option.c:450
 msgid "Activate directory-only selection"
 msgstr "Покреће избор само директоријума"
 
-#: src/option.c:449
+#: src/option.c:457
 msgid "Activate save mode"
 msgstr "Покреће режим за чување"
 
-#: src/option.c:456 src/option.c:525 src/option.c:1003
+#: src/option.c:464 src/option.c:533 src/option.c:1018
 msgid "Set output separator character"
 msgstr "Поставља знак за раздвајање на излазу"
 
-#: src/option.c:457 src/option.c:526 src/option.c:1004
+#: src/option.c:465 src/option.c:534 src/option.c:1019
 msgid "SEPARATOR"
 msgstr "РАЗДВОЈНИК"
 
-#: src/option.c:463
+#: src/option.c:471
 msgid "Set a filename filter"
 msgstr "Постави филтер имена датотеке"
 
 #. Help for file-filter argument (name and patterns for file
 #. selection)
-#: src/option.c:466
+#: src/option.c:474
 msgid "NAME | PATTERN1 PATTERN2 ..."
 msgstr "НАЗИВ | ШАБЛОН1 ШАБЛОН2 ..."
 
-#: src/option.c:483
+#: src/option.c:491
 msgid "Display list dialog"
 msgstr "Приказује прозорче са списком"
 
-#: src/option.c:497
+#: src/option.c:505
 msgid "Set the column header"
 msgstr "Поставља заглавље колоне"
 
-#: src/option.c:498
+#: src/option.c:506
 msgid "COLUMN"
 msgstr "КОЛОНА"
 
-#: src/option.c:504
+#: src/option.c:512
 msgid "Use check boxes for the first column"
 msgstr "Користи кућице за штиклирање за прву колону"
 
-#: src/option.c:511
+#: src/option.c:519
 msgid "Use radio buttons for the first column"
 msgstr "Користи радио дугмад за прву колону"
 
-#: src/option.c:518
+#: src/option.c:526
 msgid "Use an image for the first column"
 msgstr "Користи слику за прву колону"
 
-#: src/option.c:532
+#: src/option.c:540
 msgid "Allow multiple rows to be selected"
 msgstr "Дозвољава истовремени избор више редова"
 
-#: src/option.c:539 src/option.c:753
+#: src/option.c:547 src/option.c:761
 msgid "Allow changes to text"
 msgstr "Дозвољава промене текста"
 
-#: src/option.c:546
+#: src/option.c:554
 msgid ""
 "Print a specific column (Default is 1. 'ALL' can be used to print all "
 "columns)"
@@ -321,98 +319,98 @@ msgstr ""
 "користити „ALL“)"
 
 #. Column index number to print out on a list dialog
-#: src/option.c:549 src/option.c:556
+#: src/option.c:557 src/option.c:564
 msgid "NUMBER"
 msgstr "БРОЈ"
 
-#: src/option.c:555
+#: src/option.c:563
 msgid "Hide a specific column"
 msgstr "Скрива одређену колону"
 
-#: src/option.c:562
+#: src/option.c:570
 msgid "Hide the column headers"
 msgstr "Сакриј заглавља колона"
 
-#: src/option.c:579
+#: src/option.c:587
 msgid "Display notification"
 msgstr "Приказује обавештење"
 
-#: src/option.c:586
+#: src/option.c:594
 msgid "Set the notification text"
 msgstr "Поставља текст обавештења"
 
-#: src/option.c:600
+#: src/option.c:608
 msgid "Listen for commands on stdin"
 msgstr "Прати наредбе на стандардном улазу"
 
-#: src/option.c:617
+#: src/option.c:625
 msgid "Display progress indication dialog"
 msgstr "Приказује прозорче указивача напретка"
 
-#: src/option.c:631
+#: src/option.c:639
 msgid "Set initial percentage"
 msgstr "Поставља почетни проценат"
 
-#: src/option.c:632
+#: src/option.c:640
 msgid "PERCENTAGE"
 msgstr "ПРОЦЕНАТ"
 
-#: src/option.c:638
+#: src/option.c:646
 msgid "Pulsate progress bar"
 msgstr "Пулсирајући указивач напретка"
 
-#: src/option.c:646
+#: src/option.c:654
 #, no-c-format
 msgid "Dismiss the dialog when 100% has been reached"
 msgstr "Одбацује прозорче када се стигне до 100%"
 
 # bug: it's not "cancel button" but "Cancel button" or even '"Cancel" button
-#: src/option.c:653
+#: src/option.c:661
 msgid "Kill parent process if Cancel button is pressed"
 msgstr "Убија надпроцес када се притисне дугме „Откажи“"
 
-#: src/option.c:660
+#: src/option.c:668
 msgid "Hide Cancel button"
 msgstr "Скрива дугме „Откажи“"
 
-#: src/option.c:668
+#: src/option.c:676
 #, no-c-format
 msgid "Estimate when progress will reach 100%"
 msgstr "Процењује када ће напредовање достићи 100%"
 
-#: src/option.c:678
+#: src/option.c:686
 msgid "Display question dialog"
 msgstr "Приказује прозорче за упит"
 
-#: src/option.c:713
+#: src/option.c:721
 msgid "Give Cancel button focus by default"
 msgstr "Прикажи дугме „Откажи“ у жижи, подразумевано"
 
-#: src/option.c:729
+#: src/option.c:737
 msgid "Suppress OK and Cancel buttons"
 msgstr "Сакриј „У реду“ и „Откажи“ дугмад"
 
-#: src/option.c:739
+#: src/option.c:747
 msgid "Display text information dialog"
 msgstr "Приказује прозорче за текстуалне информације"
 
-#: src/option.c:746
+#: src/option.c:754
 msgid "Open file"
 msgstr "Отвара датотеку"
 
-#: src/option.c:760
+#: src/option.c:768
 msgid "Set the text font"
 msgstr "Поставља текст за унос"
 
-#: src/option.c:767
+#: src/option.c:775
 msgid "Enable an I read and agree checkbox"
 msgstr "Укључује једно „Прочитао сам и слажем се“ прозорче за избор"
 
-#: src/option.c:775
+#: src/option.c:783
 msgid "Enable HTML support"
 msgstr "Укључи подршку за ХТМЛ"
 
-#: src/option.c:782
+#: src/option.c:790
 msgid ""
 "Do not enable user interaction with the WebView. Only works if you use --"
 "html option"
@@ -420,147 +418,156 @@ msgstr ""
 "Не укључује корисничко дејство са Веб прегледом. Ради само ако користите "
 "опцију „--html“"
 
-#: src/option.c:790
+#: src/option.c:798
 msgid "Set an URL instead of a file. Only works if you use --html option"
 msgstr ""
 "Постави адресу уместо датотеке. Ради само уколико користите опцију „--html“"
 
-#: src/option.c:792
+#: src/option.c:800
 msgid "URL"
 msgstr "АДРЕСА"
 
-#: src/option.c:799
+#: src/option.c:807
 msgid "Auto scroll the text to the end. Only when text is captured from stdin"
 msgstr ""
 "Самостално премиче текст на крај. Само када је текст снимљен са стандардног "
 "улаза"
 
-#: src/option.c:810
+#: src/option.c:818
 msgid "Display warning dialog"
 msgstr "Приказује прозорче упозорења"
 
-#: src/option.c:857
+#: src/option.c:865
 msgid "Display scale dialog"
 msgstr "Приказује прозорче размере"
 
-#: src/option.c:871
+#: src/option.c:879
 msgid "Set initial value"
 msgstr "Поставља почетну вредност"
 
-#: src/option.c:872 src/option.c:879 src/option.c:886 src/option.c:893
-#: src/option.c:1045
+#: src/option.c:880 src/option.c:887 src/option.c:894 src/option.c:901
+#: src/option.c:1067
 msgid "VALUE"
 msgstr "ВРЕДНОСТ"
 
-#: src/option.c:878
+#: src/option.c:886
 msgid "Set minimum value"
 msgstr "Поставља најмању могућу вредност"
 
-#: src/option.c:885
+#: src/option.c:893
 msgid "Set maximum value"
 msgstr "Поставља највећу могућу вредност"
 
-#: src/option.c:892
+#: src/option.c:900
 msgid "Set step size"
 msgstr "Поставља вредност корака"
 
-#: src/option.c:899
+#: src/option.c:907
 msgid "Print partial values"
 msgstr "Штампа делимичне вредности"
 
-#: src/option.c:906
+#: src/option.c:914
 msgid "Hide value"
 msgstr "Скрива вредност"
 
-#: src/option.c:916
+#: src/option.c:924
 msgid "Display forms dialog"
 msgstr "Приказује прозорче образаца"
 
-#: src/option.c:923
+#: src/option.c:931
 msgid "Add a new Entry in forms dialog"
 msgstr "Додаје нову ставку у прозорче обрасца"
 
-#: src/option.c:924 src/option.c:931
+#: src/option.c:932 src/option.c:939 src/option.c:946
 msgid "Field name"
 msgstr "НАЗИВ ПОЉА"
 
-#: src/option.c:930
+#: src/option.c:938
 msgid "Add a new Password Entry in forms dialog"
 msgstr "Додаје нову ставку лозинке у прозорче обрасца"
 
-#: src/option.c:937
+#: src/option.c:945
+msgid "Add a new multi-line entry in forms dialog (Since: 4.2)"
+msgstr "Додајте нови вишередни унос у прозорчету обрасца (од: 4.2)"
+
+#: src/option.c:952
 msgid "Add a new Calendar in forms dialog"
 msgstr "Додаје нови календар у прозорче обрасца"
 
-#: src/option.c:938
+#: src/option.c:953
 msgid "Calendar field name"
 msgstr "НАЗИВ ПОЉА КАЛЕНДАРА"
 
-#: src/option.c:944
+#: src/option.c:959
 msgid "Add a new List in forms dialog"
 msgstr "Додаје нови списак у прозорче обрасца"
 
-#: src/option.c:945
+#: src/option.c:960
 msgid "List field and header name"
 msgstr "Наводи назив поља и заглавља"
 
-#: src/option.c:951
+#: src/option.c:966
 msgid "List of values for List"
 msgstr "Списак вредности за списак"
 
-#: src/option.c:952 src/option.c:959 src/option.c:973
+#: src/option.c:967 src/option.c:974 src/option.c:988
 msgid "List of values separated by |"
 msgstr "Списак вредности раздвојен |"
 
-#: src/option.c:958
+#: src/option.c:973
 msgid "List of values for columns"
 msgstr "Списак вредности за колоне"
 
-#: src/option.c:965
+#: src/option.c:980
 msgid "Add a new combo box in forms dialog"
 msgstr "Додаје ново изборно прозорче у прозорче обрасца"
 
-#: src/option.c:966
+#: src/option.c:981
 msgid "Combo box field name"
 msgstr "Назив поља изборног прозорчета"
 
-#: src/option.c:972
+#: src/option.c:987
 msgid "List of values for combo box"
 msgstr "Списак вредности изборног прозорчета"
 
-#: src/option.c:989
+#: src/option.c:1004
 msgid "Show the columns header"
 msgstr "Приказује заглавље колона"
 
-#: src/option.c:1020
+#: src/option.c:1035
 msgid "Display password dialog"
 msgstr "Приказује прозорче за лозинку"
 
-#: src/option.c:1027
+#: src/option.c:1042
 msgid "Display the username option"
 msgstr "Приказује прозорче за корисничко име"
 
-#: src/option.c:1037
+#: src/option.c:1049
+msgid "Set the dialog text (Since: 4.4)"
+msgstr "Поставите текст прозорчета (од: 4.4)"
+
+#: src/option.c:1059
 msgid "Display color selection dialog"
 msgstr "Приказује прозорче за избор боје"
 
-#: src/option.c:1044
+#: src/option.c:1066
 msgid "Set the color"
 msgstr "Поставља боју"
 
-#: src/option.c:1051
+#: src/option.c:1073
 msgid "Show the palette"
 msgstr "Приказује палету"
 
-#: src/option.c:1061
+#: src/option.c:1083
 msgid "About zenity"
 msgstr "О Зениту"
 
-#: src/option.c:1068
+#: src/option.c:1090
 msgid "Print version"
 msgstr "Исписује издање програма"
 
-#: src/option.c:1079
+#: src/option.c:1101
+#, c-format
 msgid ""
 "Warning: --icon-name is deprecated and will be removed in a future version "
 "of zenity; Treating as --icon.\n"
@@ -568,7 +575,8 @@ msgstr ""
 "Упозорење: „--icon-name“ је застарела и биће уклоњена у будућим издањима "
 "зенита. Сматрам као „--icon“.\n"
 
-#: src/option.c:1086
+#: src/option.c:1108
+#, c-format
 msgid ""
 "Warning: --window-icon is deprecated and will be removed in a future version "
 "of zenity; Treating as --icon.\n"
@@ -576,7 +584,8 @@ msgstr ""
 "Упозорење: „--window-icon“ је застарела и биће уклоњена у будућим издањима "
 "зенита. Сматрам за „--icon“.\n"
 
-#: src/option.c:1093
+#: src/option.c:1115
+#, c-format
 msgid ""
 "Warning: --confirm-overwrite is deprecated and will be removed in a future "
 "version of zenity. Ignoring.\n"
@@ -584,7 +593,8 @@ msgstr ""
 "Упозорење: „--confirm-overwrite“ је застарела и биће уклоњена у будућим "
 "издањима зенита. Занемарујем.\n"
 
-#: src/option.c:1100
+#: src/option.c:1122
+#, c-format
 msgid ""
 "Warning: --attach is deprecated and will be removed in a future version of "
 "zenity. Ignoring.\n"
@@ -592,7 +602,8 @@ msgstr ""
 "Упозорење: „--attach“ је застарела и биће уклоњена у будућим издањима "
 "зенита. Занемарујем.\n"
 
-#: src/option.c:1107
+#: src/option.c:1129
+#, c-format
 msgid ""
 "Warning: --hint is deprecated and will be removed in a future version of "
 "zenity. Ignoring.\n"
@@ -600,155 +611,166 @@ msgstr ""
 "Упозорење: „--hint“ је застарела и биће уклоњена у будућим издањима зенита. "
 "Занемарујем.\n"
 
-#: src/option.c:2028
+#: src/option.c:1452
+#, c-format
+msgid ""
+"Warning: the application ID passed to --app-id is not valid. Falling back to "
+"the default generic ID.\n"
+msgstr ""
+"Упозорење: ИД програма прослеђен уз „--app-id“ није исправан. Враћам се на "
+"подразумевани општи ИД.\n"
+
+#: src/option.c:2062
 msgid "General options"
 msgstr "Опште опције"
 
-#: src/option.c:2029
+#: src/option.c:2063
 msgid "Show general options"
 msgstr "Приказује опште опције"
 
-#: src/option.c:2041
+#: src/option.c:2075
 msgid "Calendar options"
 msgstr "Опције календара"
 
-#: src/option.c:2042
+#: src/option.c:2076
 msgid "Show calendar options"
 msgstr "Приказује опције календара"
 
-#: src/option.c:2054
+#: src/option.c:2088
 msgid "Text entry options"
 msgstr "Опције уноса текста"
 
-#: src/option.c:2055
+#: src/option.c:2089
 msgid "Show text entry options"
 msgstr "Приказује опције уноса текста"
 
-#: src/option.c:2067
+#: src/option.c:2101
 msgid "Error options"
 msgstr "Опције грешке"
 
-#: src/option.c:2067
+#: src/option.c:2101
 msgid "Show error options"
 msgstr "Приказује опције грешке"
 
-#: src/option.c:2077
+#: src/option.c:2111
 msgid "Info options"
 msgstr "Опције информација"
 
-#: src/option.c:2077
+#: src/option.c:2111
 msgid "Show info options"
 msgstr "Приказује опције информација"
 
-#: src/option.c:2087
+#: src/option.c:2121
 msgid "File selection options"
 msgstr "Опције избора датотеке"
 
-#: src/option.c:2088
+#: src/option.c:2122
 msgid "Show file selection options"
 msgstr "Приказује опције избора датотеке"
 
-#: src/option.c:2100
+#: src/option.c:2134
 msgid "List options"
 msgstr "Опције списка"
 
-#: src/option.c:2100
+#: src/option.c:2134
 msgid "Show list options"
 msgstr "Приказује опције списка"
 
-#: src/option.c:2110
+#: src/option.c:2144
 msgid "Notification options"
 msgstr "Опције обавештења"
 
-#: src/option.c:2111
+#: src/option.c:2145
 msgid "Show notification options"
 msgstr "Приказује опције обавештења"
 
-#: src/option.c:2124
+#: src/option.c:2158
 msgid "Progress options"
 msgstr "Опције напретка"
 
-#: src/option.c:2125
+#: src/option.c:2159
 msgid "Show progress options"
 msgstr "Приказује опције напретка"
 
-#: src/option.c:2137
+#: src/option.c:2171
 msgid "Question options"
 msgstr "Опције упита"
 
-#: src/option.c:2138
+#: src/option.c:2172
 msgid "Show question options"
 msgstr "Приказује опције упита"
 
-#: src/option.c:2150
+#: src/option.c:2184
 msgid "Warning options"
 msgstr "Опције упозорења"
 
-#: src/option.c:2151
+#: src/option.c:2185
 msgid "Show warning options"
 msgstr "Приказује опције упозорења"
 
-#: src/option.c:2163
+#: src/option.c:2197
 msgid "Scale options"
 msgstr "Опције размере"
 
-#: src/option.c:2163
+#: src/option.c:2197
 msgid "Show scale options"
 msgstr "Приказује опције размере"
 
-#: src/option.c:2173
+#: src/option.c:2207
 msgid "Text information options"
 msgstr "Опције текстуалног обавештења"
 
-#: src/option.c:2174
+#: src/option.c:2208
 msgid "Show text information options"
 msgstr "Приказује опције текстуалног обавештења"
 
-#: src/option.c:2186
+#: src/option.c:2220
 msgid "Color selection options"
 msgstr "Опције избора боје"
 
-#: src/option.c:2187
+#: src/option.c:2221
 msgid "Show color selection options"
 msgstr "Приказује опције избора боје"
 
-#: src/option.c:2199
+#: src/option.c:2233
 msgid "Password dialog options"
 msgstr "Опције прозорчета за лозинку"
 
-#: src/option.c:2200
+#: src/option.c:2234
 msgid "Show password dialog options"
 msgstr "Приказује опције прозорчета за избор лозинке"
 
-#: src/option.c:2212
+#: src/option.c:2246
 msgid "Forms dialog options"
 msgstr "Опције прозорчета образаца"
 
-#: src/option.c:2213
+#: src/option.c:2247
 msgid "Show forms dialog options"
 msgstr "Приказује опције прозорчета образаца"
 
-#: src/option.c:2225
+#: src/option.c:2259
 msgid "Miscellaneous options"
 msgstr "Остале опције"
 
-#: src/option.c:2226
+#: src/option.c:2260
 msgid "Show miscellaneous options"
 msgstr "Приказује остале опције"
 
-#: src/option.c:2249
+#: src/option.c:2283
+#, c-format
 msgid ""
 "This option is not available. Please see --help for all possible usages.\n"
 msgstr ""
 "Ова опција није доступна. Молим погледајте „--help“ за све опције "
 "коришћења.\n"
 
-#: src/option.c:2254
+#: src/option.c:2288
 #, c-format
 msgid "--%s is not supported for this dialog\n"
 msgstr "Опција „--%s“ није подржана за ово прозорче\n"
 
-#: src/option.c:2258
+#: src/option.c:2292
+#, c-format
 msgid "Two or more dialog options specified\n"
 msgstr "Прослеђене су две или више опција прозорчета\n"
 
@@ -759,11 +781,11 @@ msgstr "Упишите ваше корисничко име и лозинку"
 #. Add the username label and entry and increment the row for the
 #. * password entry so it will be added below the username.
 #.
-#: src/password.c:90
+#: src/password.c:95
 msgid "Username:"
 msgstr "Корисничко име:"
 
-#: src/password.c:105
+#: src/password.c:110
 msgid "Password:"
 msgstr "Лозинка:"
 
@@ -772,24 +794,39 @@ msgstr "Лозинка:"
 msgid "Time remaining: %lu:%02lu:%02lu"
 msgstr "Преостало време: %lu:%02lu:%02lu"
 
+#: src/progress.c:352 src/zenity.ui:15 src/zenity.ui:53 src/zenity.ui:88
+#: src/zenity.ui:139 src/zenity.ui:218 src/zenity.ui:385 src/zenity.ui:462
+msgid "_Cancel"
+msgstr "_Откажи"
+
+#: src/progress.c:356 src/zenity.ui:16 src/zenity.ui:54 src/zenity.ui:89
+#: src/zenity.ui:140 src/zenity.ui:178 src/zenity.ui:219 src/zenity.ui:279
+#: src/zenity.ui:386 src/zenity.ui:425 src/zenity.ui:463
+msgid "_OK"
+msgstr "_У реду"
+
 #. Translators: do not translate tokens starting with '--'; these
 #. * are command-line options which are not translatable.
 #.
 #: src/progress.c:373
+#, c-format
 msgid ""
 "Combining the options --auto-close and --percentage=100 is not supported.\n"
 msgstr ""
 "Комбиновање опција „--auto-close“ и „--percentage=100“ није подржано.\n"
 
 #: src/scale.c:62
+#, c-format
 msgid "Maximum value must be greater than minimum value.\n"
 msgstr "Највећа вредност мора бити већа од најмање вредности.\n"
 
 #: src/scale.c:70
+#, c-format
 msgid "Value out of range.\n"
 msgstr "Вредност је изван опсега.\n"
 
 #: src/tree.c:57
+#, c-format
 msgid ""
 "Warning: --mid-search is deprecated and will be removed in a future version "
 "of zenity. Ignoring.\n"
@@ -798,12 +835,14 @@ msgstr ""
 "зенита. Занемарујем.\n"
 
 #: src/tree.c:263
+#, c-format
 msgid "No column titles specified for List dialog.\n"
 msgstr "Није одређен наслов колоне за прозорче списка.\n"
 
 #. Translators: --checklist and --radiolist should not be translated
 #. * (command-line options).
 #: src/tree.c:272
+#, c-format
 msgid ""
 "Insufficient columns specified for List dialog (at least 2 are required for "
 "--checklist or --radiolist).\n"
@@ -812,6 +851,7 @@ msgstr ""
 "checklist“ или „--radiolist“).\n"
 
 #: src/tree.c:280
+#, c-format
 msgid "You should use only one List dialog type.\n"
 msgstr "Треба да користите само једну врсту прозорчета списка.\n"
 
@@ -903,91 +943,3 @@ msgstr "Упозорење"
 #: src/zenity.ui:485
 msgid "Type your password"
 msgstr "Упишите вашу лозинку"
-
-#~ msgid ""
-#~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the GNU Lesser General Public License as published by "
-#~ "the Free Software Foundation; either version 2 of the License, or (at "
-#~ "your option) any later version.\n"
-#~ msgstr ""
-#~ "Овај програм је слободан софтвер; можете га расподељивати и/или мењати "
-#~ "под условима Гнуове мање опште јавне лиценце како је објављује Задужбина "
-#~ "слободног софтвера; било издања 2 те лиценце, или (према вашем мишљењу) "
-#~ "било којег новијег издања.\n"
-
-#~ msgid ""
-#~ "This program is distributed in the hope that it will be useful, but "
-#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
-#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser "
-#~ "General Public License for more details.\n"
-#~ msgstr ""
-#~ "Овај програм се расподељује у нади да ће бити од користи, али БЕЗ ИКАКВИХ "
-#~ "ГАРАНЦИЈА; чак и без примењене гаранције ТРЖИШНЕ ВРЕДНОСТИ или "
-#~ "ПРИЛАГОЂЕНОСТИ ОДРЕЂЕНОЈ НАМЕНИ.  Погледајте Гнуову мању општу јавну "
-#~ "лиценцу за више детаља.\n"
-
-#~ msgid ""
-#~ "You should have received a copy of the GNU Lesser General Public License "
-#~ "along with this program; if not, write to the Free Software Foundation, "
-#~ "Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA."
-#~ msgstr ""
-#~ "Требали сте да примите примерак Гнуове мање опште јавне лиценце уз овај "
-#~ "програм; ако нисте, пишите Задужбини слободног софтвера на адресу: „Free "
-#~ "Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA "
-#~ "02110-1301, USA“."
-
-#~ msgid "translator-credits"
-#~ msgstr ""
-#~ "Александар Урошевић <urke@users.sourceforge.net>\n"
-#~ "Данило Шеган        <danilo@gnome.org>\n"
-#~ "Мирослав Николић    <miroslavnikolic@rocketmail.com>\n"
-#~ "Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>\n"
-#~ "\n"
-#~ "http://prevod.org — превод на српски језик."
-
-#~ msgid ""
-#~ "Invalid value for a boolean typed hint.\n"
-#~ "Supported values are 'true' or 'false'.\n"
-#~ msgstr ""
-#~ "Неисправна вредност за упут уписан логиком.\n"
-#~ "Подржане вредности су „true“ или „false“.\n"
-
-#~ msgid "Unsupported hint. Skipping.\n"
-#~ msgstr "Неподржан упут. Прескачем.\n"
-
-#~ msgid "Unknown hint name. Skipping.\n"
-#~ msgstr "Непознат назив упута. Прескачем.\n"
-
-#~ msgid "Zenity notification"
-#~ msgstr "Обавештење Зенита"
-
-#~ msgid "Set the window icon"
-#~ msgstr "Одређује иконицу прозора"
-
-#~ msgid "ICONPATH"
-#~ msgstr "ПУТАЊА ДО ИКОНИЦЕ"
-
-#~ msgid "Set the parent window to attach to"
-#~ msgstr "Поставља родитељски прозор на који се прикачиње"
-
-#~ msgid "Set the dialog icon"
-#~ msgstr "Поставља иконицу прозорчета"
-
-#~ msgid "Confirm file selection if filename already exists"
-#~ msgstr "Потврђује избор датотеке ако иста већ постоји"
-
-#~ msgid ""
-#~ "Change list default search function searching for text in the middle, not "
-#~ "on the beginning"
-#~ msgstr ""
-#~ "Мења основну функцију претраге списка тражећи текст по средини, а не на "
-#~ "почетку"
-
-#~ msgid "Set the notification hints"
-#~ msgstr "Поставља упуте обавештења"
-
-#~ msgid "Cancel"
-#~ msgstr "Откажи"
-
-#~ msgid "OK"
-#~ msgstr "У реду"
